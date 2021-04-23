@@ -3,31 +3,30 @@
 # HEADER
 #================================================================
 #% SYNOPSIS
-#+    lts_upgrade_in_place_3.sh
+#+    check_ubuntu_version.sh
 #%
 #% DESCRIPTION
-#%    Step three of the upgrade from 16.04 to 20.04.
+#%    For use in upgrade process - check which version is currently installed.
 #%
 #================================================================
 #- IMPLEMENTATION
-#-    version         lts_upgrade_in_place_step_3.sh 0.0.1
-#-    author          Carsten Agger, Marcus Funch Mogensen
+#-    author          Carsten Agger
 #-    copyright       Copyright 2020, Magenta Aps
 #-    license         BSD/MIT
 #-    email           info@magenta.dk
 #-
 #================================================================
 #  HISTORY
-#     2021/03/19 : mfm : Add OS2display migration
-#     2021/01/13 : carstena : Script creation
+#     2021/04/14 : carstena : script created.
 #
 #================================================================
 # END_OF_HEADER
 #================================================================
 
-OUR_USER=chrome
-
 set -ex
 
-do-release-upgrade -f DistUpgradeViewNonInteractive >  /var/log/os2borgerpc_upgrade_2.log
+
+lsb_release -a
+
+
 
