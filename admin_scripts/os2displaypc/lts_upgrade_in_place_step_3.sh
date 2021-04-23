@@ -25,8 +25,6 @@
 # END_OF_HEADER
 #================================================================
 
-OUR_USER=chrome
-
 set -ex
 
 do-release-upgrade -f DistUpgradeViewNonInteractive >  /var/log/os2borgerpc_upgrade_2.log
